@@ -1,0 +1,337 @@
+{% extends 'frontendLayout.html' %}
+{% load static %}
+{% block content%}
+<section id="inner-headline">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class="pageTitle">Services</h2>
+			</div>
+		</div>
+	</div>
+	</section>
+	<section id="content">
+		<div class="container content">		
+        <!-- Service Blcoks -->
+			
+						<div class="row"> 
+							<div class="col-md-12">
+								<div class="about-logo">
+									<h3>Our Best <span class="color">Get Full Site Audit Report</span></h3>
+									<p>Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas</p>
+                                    	<p>Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas</p>
+								</div>  
+							</div>
+                            <div class="col-md-12">
+                                <form name="combineSeoTool" id="combineSeoTool">
+                                    <div class="col-md-10" style="padding-left:0px">
+                                        <input type="text" name="inputUrl" value="{{requestedUrl}}" class="form-control" placeholder="http://www.example.com" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                    </div>
+                                    <div class="col-md-2">
+                                      <button class="btn btn-outline-secondary" style="color:white; background:#002e5b;border-color:#002e5b;padding: 6px;" type="submit" id="button-addon2">Get Full Site Audit Report</button>
+                                    </div>
+                                </form> 
+                            </div>
+						</div>
+						  
+						    <!-- Info Blcoks -->
+        <div class="row">
+            <div class="col-sm-4 info-blocks">
+              
+                <div class="info-blocks-in">
+                    <h3 data-toggle="tooltip" title="Robots.txt is a text file webmasters create to instruct web robots (typically search engine robots) how to crawl pages on their website.">Robots.txt</h3>
+                    <p>{% autoescape off  %}
+						{{robotTxt|linebreaks|escape}}
+						{% endautoescape %}</p>
+                </div>
+
+            </div>
+            <div class="col-sm-4 info-blocks">
+                <div class="info-blocks-in">
+                    <h3>XML Site Map(Crawler)</h3>
+                    <p>{% autoescape off  %}
+						{{sitemapXML|linebreaks|escape}}
+						{% endautoescape %}</p>
+                </div>
+            </div>
+            <div class="col-sm-4 info-blocks">
+                <div class="info-blocks-in">
+                    <h3>Https (Secure Site)
+					</h3>
+                    <p>{% autoescape off  %}
+						{{checkHttps|linebreaks|escape}}
+						{% endautoescape %}</p>
+                </div>
+            </div>
+        </div>
+        <!-- End Info Blcoks -->
+
+       
+        <!-- Info Blcoks -->
+        <div class="row">
+            <div class="col-sm-4 info-blocks">
+                <div class="info-blocks-in">
+                    <h3>Google Analytics Code</h3>
+                    <p>{% autoescape off  %}
+						{{analyticCodeExist|linebreaks|escape}}
+						{% endautoescape %}</p>
+                </div>
+            </div>
+            <div class="col-sm-4 info-blocks">
+                <div class="info-blocks-in">
+                    <h3>Responsive Navigation</h3>
+                    <p>{% autoescape off  %}
+						{{menuResponsive|linebreaks|escape}}
+						{% endautoescape %}</p>
+                </div>
+            </div>
+            <div class="col-sm-4 info-blocks">
+                <div class="info-blocks-in">
+                    <h3>Responsive Design</h3>
+                    <p>{% autoescape off  %}
+						{{pageResponsive|linebreaks|escape}}
+						{% endautoescape %}</p>
+                </div>
+            </div>
+        </div>
+        <!-- End Info Blcoks -->
+ 
+		<div class="row">
+            <div class="col-sm-4 info-blocks">
+                <div class="info-blocks-in">
+                    <h3>Responsive images</h3>
+                    <p>{% autoescape off  %}
+						{{imgResponsive|linebreaks|escape}}
+						{% endautoescape %}</p>
+                </div>
+            </div>
+            <div class="col-sm-4 info-blocks">
+                <div class="info-blocks-in">
+                    <h3>SEO Friendly Url’s
+					</h3>
+                    <p>consequatur aliquam, incidunt</p>
+                </div>
+            </div>
+            <div class="col-sm-4 info-blocks">
+                <div class="info-blocks-in">
+                    <h3>404 Page</h3>
+                    <p>{% autoescape off  %}
+						{{page404|linebreaks|escape}}
+						{% endautoescape %}</p>
+                </div>
+            </div>
+        </div>
+
+		<div class="row">
+            <div class="col-sm-4 info-blocks">
+                <div class="info-blocks-in">
+                    <h3>Meta Title Tag</h3>
+                    <p>{% autoescape off  %}
+						{{metaTtitleTag|linebreaks|escape}}
+						{% endautoescape %}</p>
+                </div>
+            </div>
+            <div class="col-sm-4 info-blocks">
+                <div class="info-blocks-in">
+                    <h3>Title Length</h3>
+                    <p>{% autoescape off  %}
+						{{metaTtitleTagLength|linebreaks|escape}}
+						{% endautoescape %}</p>
+                </div>
+            </div>
+            <div class="col-sm-4 info-blocks">
+                <div class="info-blocks-in">
+                    <h3>NoIndex & Nofollow Tag
+					</h3>
+                    <p>{% autoescape off  %}
+						{{noIndexChecker|linebreaks|escape}}
+						{% endautoescape %}</p>
+                </div>
+            </div>
+        </div>
+
+		<div class="row">
+            <div class="col-sm-4 info-blocks">
+                <div class="info-blocks-in">
+                    <h3>Meta Description Tag					</h3>
+                    <p>{% autoescape off  %}
+						{{meetaDescriptiontagCheck|linebreaks|escape}}
+						{% endautoescape %}</p>
+                </div>
+            </div>
+            <div class="col-sm-4 info-blocks">
+                <div class="info-blocks-in">
+                    <h3>Description Length</h3>
+                    <p>{% autoescape off  %}
+						{{meetaDescriptiontagLength|linebreaks|escape}}
+						{% endautoescape %}</p>
+                </div>
+            </div>
+            <div class="col-sm-4 info-blocks">
+                <div class="info-blocks-in">
+                    <h3>Recent Page Indexed Date</h3>
+                    <p>{% autoescape off  %}
+						{{googleRecentPageIndex|linebreaks|escape}}
+						{% endautoescape %}</p>
+                </div>
+            </div>
+        </div>
+
+		<div class="row">
+            <div class="col-sm-4 info-blocks">
+                <div class="info-blocks-in">
+                    <h3>H1 Heading Tag</h3>
+                    <p>{% autoescape off  %}
+						{{checkH1Tag|linebreaks|escape}}
+						{% endautoescape %}</p>
+                </div>
+            </div>
+            <div class="col-sm-4 info-blocks">
+                <div class="info-blocks-in">
+                    <h3>Canonical Tag</h3>
+                    <p>{% autoescape off  %}
+						{{canonicalTagExist|linebreaks|escape}}
+						{% endautoescape %}</p>
+                </div>
+            </div>
+            <div class="col-sm-4 info-blocks">
+                <div class="info-blocks-in">
+                    <h3>Image Alt Tags</h3>
+                    <p>{% autoescape off  %}
+						{{imageAltAttributes|linebreaks|escape}}
+						{% endautoescape %}</p>
+                </div>
+            </div>
+        </div>
+		
+
+		<div class="row">
+            <div class="col-sm-4 info-blocks">
+                <div class="info-blocks-in">
+                    <h3>Page Load Time</h3>
+                    <p>{% autoescape off  %}
+						{{pageLoadTime|linebreaks|escape}}
+						{% endautoescape %}</p>
+                </div>
+            </div>
+            <div class="col-sm-4 info-blocks">
+                <div class="info-blocks-in">
+                    <h3>Desktop Speed Score	</h3>
+                    <p>consequatur aliquam, incidunt</p>
+                </div>
+            </div>
+            <div class="col-sm-4 info-blocks">
+                <div class="info-blocks-in">
+                    <h3>Mobile Speed Score</h3>
+                    <p>consequatur aliquam, incidunt</p>
+                </div>
+            </div>
+        </div>
+
+
+		<div class="row">
+            <div class="col-sm-4 info-blocks">
+                <div class="info-blocks-in">
+                    <h3>Domain Registered
+					</h3>
+                    <p>{% autoescape off  %}
+						{{domainRegisterDate|linebreaks|escape}}
+						{% endautoescape %}</p>
+                </div>
+            </div>
+            <div class="col-sm-4 info-blocks">
+                <div class="info-blocks-in">
+                    <h3>Domain Expires on
+					</h3>
+                    <p>{% autoescape off  %}
+						{{domainExpireDate|linebreaks|escape}}
+						{% endautoescape %}</p>
+                </div>
+            </div>
+            <div class="col-sm-4 info-blocks">
+                <div class="info-blocks-in">
+                    <h3>Registrar</h3>
+                    <p>{% autoescape off  %}
+						{{registrar|linebreaks|escape}}
+						{% endautoescape %}</p>
+                </div>
+            </div>
+        </div>
+
+		<div class="row">
+            <div class="col-sm-4 info-blocks">
+                <div class="info-blocks-in">
+                    <h3>Updated On</h3>
+                    <p>{% autoescape off  %}
+						{{emails|linebreaks|escape}}
+						{% endautoescape %}</p>
+                </div>
+            </div>
+            <div class="col-sm-4 info-blocks">
+                <div class="info-blocks-in">
+                    <h3>Name Server</h3>
+                    <p>{% autoescape off  %}
+						{{domainAddress|linebreaks|escape}}
+						{% endautoescape %}</p>
+                </div>
+            </div>
+            <div class="col-sm-4 info-blocks">
+                <div class="info-blocks-in">
+                    <h3>Total Page</h3>
+                    <p>{% autoescape off  %}
+						{{totalPage|linebreaks|escape}}
+						{% endautoescape %}</p>
+                </div>
+            </div>
+        </div>
+
+
+		
+		<div class="row">
+            
+            <div class="col-sm-4 info-blocks">
+                <div class="info-blocks-in">
+                    <h3>Validation Error	</h3>
+                    <p>{% autoescape off  %}
+						{{domainIssue|linebreaks|escape}}
+						{% endautoescape %}</p>
+                </div>
+            </div>
+            <div class="col-sm-4 info-blocks">
+                <div class="info-blocks-in">
+                    <h3>Inbound Link</h3>
+                    <p>{% autoescape off  %}
+						{{TotalLinkingSite|linebreaks|escape}}
+						{% endautoescape %}</p>
+                </div>
+            </div>
+            <div class="col-sm-4 info-blocks">
+                <div class="info-blocks-in">
+                    <h3>Alexa Rank
+					</h3>
+                    <p>{% autoescape off  %}
+						{{AlexaRank|linebreaks|escape}}
+						{% endautoescape %}</p>
+                </div>
+            </div>
+        </div>
+
+		<div class="row">
+            <div class="col-sm-4 info-blocks">
+                <div class="info-blocks-in">
+                    <h3>Total Page indexed in Google
+					</h3>
+                    <p>{% autoescape off  %}
+						{{googlePageIndex|linebreaks|escape}}
+						{% endautoescape %}</p>
+                </div>
+            </div>
+        </div>
+
+
+
+        
+    </div>
+    </section>
+	
+{% endblock%}

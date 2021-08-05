@@ -1,0 +1,47 @@
+{% extends 'frontendLayout.html' %}
+{% load static %}
+{% block content%}
+<section id="inner-headline">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class="pageTitle">Services</h2>
+			</div>
+		</div>
+	</div>
+	</section>
+	<section id="content">
+		<div class="container content">		
+        <!-- Service Blcoks -->
+			
+						<div class="row"> 
+							<div class="col-md-12">
+								<div class="about-logo">
+									<h3>Our Best <span class="color">Get Full Site Audit Report</span></h3>
+									<p>Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas</p>
+                                    	<p>Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas</p>
+                                        <p style="color: red;">{{error}}</p>
+                                    </div>  
+							</div>
+                            <div class="col-md-12">
+                                <form name="combineSeoTool" id="combineSeoTool">
+                                    <div class="col-md-10" style="padding-left:0px">
+                                        <input type="text" name="inputUrl" value="{{requestedUrl}}" class="form-control" placeholder="http://www.example.com" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                    </div>
+                                    <div class="col-md-2">
+                                      <button class="btn btn-outline-secondary" style="color:white; background:#002e5b;border-color:#002e5b;padding: 6px;" type="submit" id="button-addon2">Get Full Site Audit Report</button>
+                                    </div>
+                                </form> 
+                            </div>
+                            <div class="col-md-12">
+								<div class="about-logo">
+                            {% if error %}
+                                <p><br>No result found related to your enterd web site name. Please check entered website name...                                </p> 
+                            {% endif %}
+                            </div>
+                            </div>
+						</div>
+    </div>
+    </section>
+	
+{% endblock%}

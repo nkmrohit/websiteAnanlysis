@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DotNetTec - Invoice html template bootstrap</title>
+	<link href="https://www.alexa.com/alx-sa-c0d6d28c-1620928494/css/scssv2/compiled/style.css" media="screen" rel="stylesheet" type="text/css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.css'>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+			<div class="card-header">
+                Invoice
+                <strong>01/01/2020</strong>
+                <span class="float-right"> <strong>Status:</strong> Pending</span>
+
+            </div>
+			<div class="card-body">
+				<div class="row mb-4">
+					<div class="col-sm-6" >
+						{% autoescape off %}{{ KEY_WORD_OPPORTUNITIES }}{% endautoescape %}
+					</div>
+					<div class="col-sm-6" >
+						{% autoescape off %}{{ ALEXA_RANK_90_DAY_TREND }}{% endautoescape %}
+					</div>
+					<div class="col-sm-6">
+						{% autoescape off %}{{ Alexa_Rank }}{% endautoescape %}
+					</div>
+
+					<div class="col-sm-6">
+						{% autoescape off %}{{ Audience_Geography }}{% endautoescape %}
+					</div>
+
+					<div class="col-sm-6">
+						
+						{% autoescape off %}{{ TOP_KEYWORDS_BY_TRAFFIC }}{% endautoescape %}
+
+					</div>
+
+					<div class="col-sm-6">
+						{% autoescape off %}{{ Traffic_Sources }}{% endautoescape %}
+					</div>
+
+					<div class="col-sm-6">
+						{% autoescape off %}{{ Referral_Sites }}{% endautoescape %}
+					</div>
+					<div class="col-sm-6">
+						{% autoescape off %}{{ Top_Keywords }}{% endautoescape %}
+					</div>
+
+					<div class="col-sm-6">
+						{% autoescape off %}{{ Site_Metrics }}{% endautoescape %}
+					</div>
+
+				</div>
+			</div>
+			
+			==========
+			<div class="card-body">
+				<div class="row mb-4">
+                    <div class="col-sm-6" style="float: left; width: 50%; color: 1px solid red;">
+						<h3>Validation Error	</h3>
+                    	<p>{% autoescape off  %}
+						{{domainIssue|linebreaks|escape}}
+						{% endautoescape %}</p>
+                    </div>
+                    <div class="col-sm-6" style="float:left;width: 50%;">
+						<h3>Total Page</h3>
+                    	<p>{% autoescape off  %}
+						{{totalPage|linebreaks|escape}}
+						{% endautoescape %}</p>
+                    </div>
+                </div>
+				<div class="row mb-4">
+                    <div class="col-sm-6" style="float:left;width: 50%;">
+						<h3>Alexa Rank</h3>
+						<p>{% autoescape off  %}
+							{{AlexaRank|linebreaks|escape}}
+							{% endautoescape %}</p>
+                    </div>
+                    <div class="col-sm-6" style="float:left;width: 50%;">
+						<h3>Total Page indexed in Google
+						</h3>
+						<p>{% autoescape off  %}
+							{{googlePageIndex|linebreaks|escape}}
+							{% endautoescape %}</p>
+                    </div>
+                </div>
+				<div class="row mb-4">
+                    <div class="col-sm-6" style="float:left;width: 50%;">
+						<h3>Inbound Link</h3>
+                   		 <p>{% autoescape off  %}
+						{{TotalLinkingSite|linebreaks|escape}}
+						{% endautoescape %}</p>
+                    </div>
+                    <div class="col-sm-6" style="float:left;width: 50%;">
+						<h3 data-toggle="tooltip" title="Robots.txt is a text file webmasters create to instruct web robots (typically search engine robots) how to crawl pages on their website.">Robots.txt</h3>
+                   		 <p>{% autoescape off  %}
+						{{robotTxt|linebreaks|escape}}
+						{% endautoescape %}</p>
+                    </div>
+                </div>
+				<div class="row mb-4">
+                    <div class="col-sm-6" style="float:left;width: 50%;">
+						<h3>Https (Secure Site)
+						</h3>
+						<p>{% autoescape off  %}
+							{{checkHttps|linebreaks|escape}}
+							{% endautoescape %}</p>
+                    </div>
+                    <div class="col-sm-6" style="float:left;width: 50%;">
+						<h3>Google Analytics Code</h3>
+                    <p>{% autoescape off  %}
+						{{analyticCodeExist|linebreaks|escape}}
+						{% endautoescape %}</p>
+                    </div>
+                </div>
+				<div class="row mb-4">
+                    <div class="col-sm-6" style="float:left;width: 50%;">
+						<h3>404 Page</h3>
+                    <p>{% autoescape off  %}
+						{{page404|linebreaks|escape}}
+						{% endautoescape %}</p>
+                    </div>
+                    <div class="col-sm-6" style="float:left;width: 50%;">
+						<h3>NoIndex & Nofollow Tag
+						</h3>
+						<p>{% autoescape off  %}
+							{{noIndexChecker|linebreaks|escape}}
+							{% endautoescape %}</p>
+                    </div>
+                </div>
+				<div class="row mb-4">
+                    <div class="col-sm-6" style="float:left;width: 50%;">
+						<h3>Recent Page Indexed Date</h3>
+                    <p>{% autoescape off  %}
+						{{googleRecentPageIndex|linebreaks|escape}}
+						{% endautoescape %}</p>
+                    </div>
+                    <div class="col-sm-6" style="float:left;width: 50%;">
+						
+                    </div>
+                </div>
+
+				<div class="row mb-4">
+                    <div class="col-sm-6">
+						<h2>Reponsive Checking</h2>
+                    </div>
+                </div>
+				<div class="row mb-4">
+                    <div class="col-sm-6" style="float:left;width: 50%;">
+						<h3>Responsive Navigation</h3>
+                    	<p>{% autoescape off  %}
+						{{menuResponsive|linebreaks|escape}}
+						{% endautoescape %}</p>
+                    </div>
+                    <div class="col-sm-6" style="float:left;width: 50%;">
+						<h3>Responsive Design</h3>
+                    <p>{% autoescape off  %}
+						{{pageResponsive|linebreaks|escape}}
+						{% endautoescape %}</p>
+                    </div>
+                </div>
+				<div class="row mb-4">
+                    <div class="col-sm-6" style="float:left;width: 50%;">
+						<h3>Responsive images</h3>
+                    <p>{% autoescape off  %}
+						{{imgResponsive|linebreaks|escape}}
+						{% endautoescape %}</p>
+                    </div>
+                    <div class="col-sm-6" style="float:left;width: 50%;">
+						<h3>SEO Friendly Url’s
+						</h3>
+						<p>consequatur aliquam, incidunt</p>
+                    </div>
+                </div>
+				<div class="row mb-4">
+                    <div class="col-sm-6">
+						<h2>Page Meta Tag / Description Length</h2>
+                    </div>
+                </div>
+				<div class="row mb-4">
+                    <div class="col-sm-6" style="float:left;width: 50%;">
+						<h3>Meta Title Tag</h3>
+                  		  <p>{% autoescape off  %}
+						{{metaTtitleTag|linebreaks|escape}}
+						{% endautoescape %}</p>
+                    </div>
+                    <div class="col-sm-6" style="float:left;width: 50%;">
+						<h3>Title Length</h3>
+                    	<p>{% autoescape off  %}
+						{{metaTtitleTagLength|linebreaks|escape}}
+						{% endautoescape %}</p>
+                    </div>
+                </div>
+				<div class="row mb-4">
+                    <div class="col-sm-6" style="float:left;width: 50%;">
+						<h3>Meta Description Tag					</h3>
+                    <p>{% autoescape off  %}
+						{{meetaDescriptiontagCheck|linebreaks|escape}}
+						{% endautoescape %}</p>
+                    </div>
+                    <div class="col-sm-6" style="float:left;width: 50%;">
+						<h3>Description Length</h3>
+                    <p>{% autoescape off  %}
+						{{meetaDescriptiontagLength|linebreaks|escape}}
+						{% endautoescape %}</p>
+                    </div>
+                </div>
+				<div class="row mb-4">
+                    <div class="col-sm-6">
+						<h2>Page Load Time / Speed</h2>
+                    </div>
+                </div>
+				<div class="row mb-4">
+                    <div class="col-sm-6" style="float:left;width: 50%;">
+						<h3>Page Load Time</h3>
+                   		 <p>{% autoescape off  %}
+						{{pageLoadTime|linebreaks|escape}}
+						{% endautoescape %}</p>
+                    </div>
+                    <div class="col-sm-6" style="float:left;width: 50%;">
+						<h3>Desktop Speed Score	</h3>
+                   		 <p>consequatur aliquam, incidunt</p>
+                    </div>
+                </div>
+				<div class="row mb-4">
+                    <div class="col-sm-6" style="float:left;width: 50%;">
+						<h3>Mobile Speed Score</h3>
+						<p>consequatur aliquam, incidunt</p>
+                    </div>
+                    <div class="col-sm-6" style="float:left;width: 50%;">
+						
+                    </div>
+                </div>
+				<div class="row mb-4">
+                    <div class="col-sm-6">
+						<h2>Domain & Server Detail</h2>
+                    </div>
+                </div>
+				<div class="row mb-4">
+                    <div class="col-sm-6" style="float:left;width: 50%;">
+						<h3>Domain Registered
+						</h3>
+						<p>{% autoescape off  %}
+							{{domainRegisterDate|linebreaks|escape}}
+							{% endautoescape %}</p>
+                    </div>
+                    <div class="col-sm-6" style="float:left;width: 50%;">
+						<h3>Domain Expires on
+						</h3>
+						<p>{% autoescape off  %}
+							{{domainExpireDate|linebreaks|escape}}
+							{% endautoescape %}</p>
+                    </div>
+                </div>
+				<div class="row mb-4">
+                    <div class="col-sm-6" style="float:left;width: 50%;">
+						<h3>Registrar</h3>
+                    	<p>{% autoescape off  %}
+						{{registrar|linebreaks|escape}}
+						{% endautoescape %}</p>
+						
+                    </div>
+                    <div class="col-sm-6" style="float:left;width: 50%;">
+						<h3>Updated On</h3>
+                   		 <p>{% autoescape off  %}
+						{{emails|linebreaks|escape}}
+						{% endautoescape %}</p>
+                    </div>
+                </div>
+				<div class="row mb-4">
+                    <div class="col-sm-6" style="float:left;width: 50%;">
+						<h3>Name Server</h3>
+                    	<p>{% autoescape off  %}
+						{{domainAddress|linebreaks|escape}}
+						{% endautoescape %}</p>
+                    </div>
+                    <div class="col-sm-6" style="float:left;width: 50%;">
+						
+                    </div>
+                </div>
+				<div class="row mb-4">
+                    <div class="col-sm-6">
+						<h2>All Link And Problem</h2>
+                    </div>
+                </div>
+				<div class="row mb-4">
+                    <div class="col-sm-6" style="float:left;width: 50%;">
+						<h3>XML Site Map(Crawler)</h3>
+                    	<p>{% autoescape off  %}
+						{{sitemapXML|linebreaks|escape}}
+						{% endautoescape %}</p>
+                    </div>
+                    <div class="col-sm-6" style="float:left;width: 50%;">
+						<h3>H1 Heading Tag</h3>
+                    <p>{% autoescape off  %}
+						{{checkH1Tag|linebreaks|escape}}
+						{% endautoescape %}</p>
+                    </div>
+                </div>
+				<div class="row mb-4">
+                    <div class="col-sm-6" style="float:left;width: 50%;">
+						<h3>Canonical Tag</h3>
+                    <p>{% autoescape off  %}
+						{{canonicalTagExist|linebreaks|escape}}
+						{% endautoescape %}</p>
+                    </div>
+                    <div class="col-sm-6" style="float:left;width: 50%;">
+						<h3>Image Alt Tags</h3>
+                    <p>{% autoescape off  %}
+						{{imageAltAttributes|linebreaks|escape}}
+						{% endautoescape %}</p>
+                    </div>
+                </div>
+			</div>			
+		
+</div>
+</div>
+</body>	
+</html>
+	

@@ -1,0 +1,220 @@
+{% extends 'frontendLayout.html' %}
+{% load css_inline %}
+{% load static %}
+{% block content%}
+<style>
+	.ACard.Mini, .CDT .Mini.SideCard {
+		padding-bottom: 45px;
+		box-sizing: border-box;
+	}
+	.ACard, .CDT .SideCard {
+    	margin-bottom: 16px;
+    	float: left;
+    	width: 100%;
+	}
+	.Card, .ACard, .CDT .SideCard, .ALightbox {
+    border: none;
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0 1px 5px #e0e0e0;
+    -moz-box-shadow: 0 1px 5px #E0E0E0;
+    -webkit-box-shadow: 0 1px 5px #e0e0e0;
+}
+body {
+    word-wrap: break-word;
+}
+body {
+    font-family: "Open Sans",Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    line-height: 1.8;
+}
+.ACard.Mini .Header, .CDT .Mini.SideCard .Header {
+    padding: 18px 16px 30px;
+}	
+.Card>div:first-child, .ACard>div:first-child, .CDT .SideCard>div:first-child, .ALightbox>div:first-child, .Card>h3:first-child, .ACard>h3:first-child, .CDT .SideCard>h3:first-child, .ALightbox>h3:first-child, .Card>section:first-child, .ACard>section:first-child, .CDT .SideCard>section:first-child, .ALightbox>section:first-child {
+    padding-top: 16px;
+}
+.ACard section, .CDT .SideCard section {
+    position: relative;
+}
+.Card>div, .ACard>div, .CDT .SideCard>div, .ALightbox>div, .Card>h3, .ACard>h3, .CDT .SideCard>h3, .ALightbox>h3, .Card>section, .ACard>section, .CDT .SideCard>section, .ALightbox>section {
+    padding: 0 16px 32px 16px;
+    box-sizing: border-box;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+    display: block;
+}
+.ACard.Mini .Header h3, .CDT .Mini.SideCard .Header h3 {
+    font-size: 13px;
+    color: #545454;
+    line-height: 18px;
+    margin: 0;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+.ACard .Header h3, .CDT .SideCard .Header h3 {
+    font-size: 25px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    letter-spacing: normal;
+    color: #020202;
+    margin: 0px 0 0px 0;
+}
+.ACard section h3, .CDT .SideCard section h3 {
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    color: #8a8a8a;
+    width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 10px 0;
+    font-family: inherit;
+    font-weight: bold;
+    line-height: 20px;
+    color: inherit;
+    text-rendering: optimizelegibility;
+}
+.lightquestion {
+    width: 22px;
+    margin-top: -5px;
+}
+img {
+    width: auto\9;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
+.Apopovertrigger+.Catch {
+    position: relative;
+    top: auto;
+    left: auto;
+    border-top: #d8d8d8;
+}
+.Apopover, .Apopovertrigger+.Catch, .CDT .SideCard .graphtooltip {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    color: #555;
+    max-width: 250px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    position: absolute;
+    font-weight: 400;
+    white-space: normal;
+    box-shadow: none;
+    border-radius: 3px;
+    z-index: 9999999;
+    -o-transition: visibility 0.2s, opacity 0.2s linear;
+    -ms-transition: visibility 0.2s, opacity 0.2s linear;
+    -moz-transition: visibility 0.2s, opacity 0.2s linear;
+    -webkit-transition: visibility 0.2s, opacity 0.2s linear;
+    transition: visibility 0.2s, opacity 0.2s linear;
+}
+.Apopover p, .Apopovertrigger+.Catch p, .CDT .SideCard .graphtooltip p {
+    font-size: 12px;
+    font-weight: normal;
+    color: #333333;
+    margin: 0 0 5px 0;
+    line-height: 22px;
+}
+.ACard .Header p, .CDT .SideCard .Header p {
+    margin: 0;
+    color: #8a8a8a;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+}
+.Apopover .secTitle, .Apopovertrigger+.Catch .secTitle, .CDT .SideCard .graphtooltip .secTitle {
+    margin-top: 15px;
+    font-weight: 600;
+}
+</style>
+<link href="https://www.alexa.com/alx-sa-c0d6d28c-1620928494/css/scssv2/compiled/style.css" media="screen" rel="stylesheet" type="text/css">
+
+<section id="content">
+	<div class="container">	 
+		<div class="row"> 
+			<div class="col-md-12">
+				<div class="about-logo">
+					<h3>Welcome to our web page health checkup</h3>
+				</div>  
+			</div>
+		</div>
+		<!-- end divider -->
+		<div class="row">
+			<div class="col-md-6 col-sm-6">
+				<div class="pricing-box-item activeItem">
+						{% autoescape off %}{{ KEY_WORD_OPPORTUNITIES }}{% endautoescape %}
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6">
+				<div class="pricing-box-item activeItem">
+					{% autoescape off %}{{ ALEXA_RANK_90_DAY_TREND }}{% endautoescape %}
+				</div>
+			</div>
+		</div>
+		
+
+		<div class="row">
+			<div class="col-md-6 col-sm-6">
+				<div class="pricing-box-item activeItem">
+						{% autoescape off %}{{ Alexa_Rank }}{% endautoescape %}
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6">
+				<div class="pricing-box-item activeItem">
+						{% autoescape off %}{{ Audience_Geography }}{% endautoescape %}
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-6 col-sm-6">
+				<div class="pricing-box-item activeItem">
+						
+						{% autoescape off %}{{ TOP_KEYWORDS_BY_TRAFFIC }}{% endautoescape %}
+
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6">
+				<div class="pricing-box-item activeItem">
+						{% autoescape off %}{{ Traffic_Sources }}{% endautoescape %}
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-6 col-sm-6">
+				<div class="pricing-box-item activeItem">
+						{% autoescape off %}{{ Referral_Sites }}{% endautoescape %}
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6">
+				<div class="pricing-box-item activeItem">
+						{% autoescape off %}{{ Top_Keywords }}{% endautoescape %}
+				</div>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="col-md-12 col-sm-12">
+				<div class="pricing-box-item activeItem">
+						{% autoescape off %}{{ Site_Metrics }}{% endautoescape %}
+				</div>
+			</div>
+		</div>
+
+
+	</section>
+	{% endblock%}
